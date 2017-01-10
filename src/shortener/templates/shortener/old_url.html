@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %}
+	Statistics
+{% endblock title %}
+
+{% block script %}
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="{% static 'custom/js/chart.js' %}"></script>
+{% endblock script %}
+
+
+
+{% block content %}
+
+	<div class="row statistics-box">
+		<h1 class="cover-heading">STATISTICS</h1>
+	</div>
+	<div class="row">
+		<div id ="url-box" class='col-sm-4 col-sm-offset-4'>
+			<p> <b><span style="color: #747474;">Original URL:</span></b> <span style="display:inline-block; width: 15px;"></span> <a href="{{url}}">{{url}}</a> </p>
+			<p> <b><span style="color: #747474;">Short URL: </span></b> <span style="display:inline-block; width: 15px;"></span> <a id="short-url" href="{{short_url}}">{{short_url}}</a> </p>
+			<h1 id ="id" class="hidden">{{id}}</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div id="chart-box" class='col-sm-8 col-sm-offset-2'>
+			<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+		</div>
+	</div>
+	<div id="back-button" class="row">
+		<div class='col-sm-4 col-sm-offset-4'>
+			<a href="/" class="btn btn-primary back-button">Back</a>
+		</div>
+	</div>
+
+
+{% endblock content %}
+
+

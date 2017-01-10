@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block content %}
+
+	<div class="row url-box">
+		<h1 class="cover-heading">URL Shortener</h1>
+		<div class='col-sm-4 col-sm-offset-4'>
+			<form method="POST" action=".">{% csrf_token %}
+				{{ form|crispy }}
+				<input class='btn btn-primary' type="submit" value="Shorten">
+			</form>
+		</div>
+	</div>
+		
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Congrats
+{% endblock title %}
+
+{% block content %}
+
+	<div class="row url-box">
+		<h1 class="cover-heading">CONGRATULATIONS!</h1>
+	</div>
+
+	<div class="row">
+		<div class='col-sm-4 col-sm-offset-4'>
+			<p> <b><span style="color: #747474;">Original URL:</span></b> <span style="display:inline-block; width: 15px;"></span> <a href="{{url}}">{{url}}</a> </p>
+			<p> <b><span style="color: #747474;">Short URL: </span></b> <span style="display:inline-block; width: 15px;"></span> <a href="{{short_url}}">{{short_url}}</a> </p>
+			<a href="/" class="btn btn-primary back-button">Back</a>
+		</div>
+	</div>
+		
+{% endblock content %}
